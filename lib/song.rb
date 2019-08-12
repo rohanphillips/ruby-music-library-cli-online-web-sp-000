@@ -31,9 +31,8 @@ class Song
 
   def self.find_or_create_by_name(name)
     newsong = self.find_by_name(name)
-    binding.pry
     if newsong == nil
-      newsong = Song.new(name)
+      newsong = Song.create(name)
     end
     newsong
   end
