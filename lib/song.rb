@@ -37,7 +37,7 @@ class Song
     songname = Song.get_info(info, "songname")
     newsong = self.create(songname)
     artistname = Song.get_info(info, "artist")
-    newsong.artist = self.find_or_create_by_name(artistname)
+    newsong.artist = Artist.find_or_create_by_name(artistname)
 
     newsong.genre = Genre.create(Song.get_info(info, "genre"))
 
