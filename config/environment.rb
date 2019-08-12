@@ -6,7 +6,7 @@ module Concerns
     def find_or_create_by_name(name)
       newsong = self.find_by_name(name)
       if newsong == nil
-        newsong = Song.create(name)
+        newsong = self.create(name)
       end
       newsong
     end
