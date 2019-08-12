@@ -37,7 +37,7 @@ class Song
     songname = Song.get_info(info, "songname")
     newsong = self.create(songname)
     artistname = Song.get_info(info, "artist")
-    newartist = self.find_by_name(artistname)
+    newartist = self.find_or_create_by_name(artistname)
     if newartist == nil
       newartist = Artist.create(artistname)
     end
