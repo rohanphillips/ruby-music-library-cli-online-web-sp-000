@@ -1,6 +1,6 @@
 module Memorable
   module ClassMethods
-    def reset_all
+    def destroy_all
       all.clear
     end
 
