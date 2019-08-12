@@ -31,7 +31,7 @@ class Song
     newsong
   end
 
-  def self.new_by_filename(name)
+  def self.new_from_filename(name)
 
     info = name.match(/\w*.*(?=[.])/).to_s
     songname = Song.get_info(info, "songname")
