@@ -31,6 +31,7 @@ class Artist
   end
 
   def add_song(song)
+    binding.pry
     if song_exists?(song) == false
       @songs << song
     end
