@@ -40,7 +40,7 @@ class MusicLibraryController
       response = gets.strip
       case response
       when "list songs"
-        list_songs
+        return list_songs
       end
     end
 
