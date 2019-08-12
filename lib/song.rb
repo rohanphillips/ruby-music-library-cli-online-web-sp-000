@@ -19,7 +19,7 @@ class Song
     @name = name
     @artist = []
     if artist != ""
-      artist=(artist)
+      self.artist=(artist)
     end
   end
 
