@@ -42,7 +42,7 @@ class Song
       newartist = Artist.create(artistname)
     end
     newsong.artist = newartist
-    
+
     newsong.genre = Genre.create(Song.get_info(info, "genre"))
     binding.pry
     newsong
