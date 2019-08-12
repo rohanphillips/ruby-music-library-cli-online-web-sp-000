@@ -14,6 +14,7 @@ class Song
 
   @@all = []
   @artist = []
+
   def initialize(name, artist = "")
     @name = name
     if artist != ""
@@ -31,7 +32,6 @@ class Song
   def self.all
     @@all
   end
-
 
   def artist=(artist)
     @artist = artist
