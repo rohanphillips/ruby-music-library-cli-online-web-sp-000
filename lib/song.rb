@@ -32,7 +32,7 @@ class Song
   end
 
   def self.new_from_filename(name)
-    
+
     info = name.match(/\w*.*(?=[.])/).to_s
     songname = Song.get_info(info, "songname")
     binding.pry
