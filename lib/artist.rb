@@ -31,16 +31,12 @@ class Artist
   end
 
   def add_song(song)
-    if song_exists?(song) == nil
+    if song_exists?(@song, song) == nil
       @songs << song
     end
     if song.artist == ""
       song.artist = self
     end
-  end
-
-  def song_exists?(song)
-    @songs.detect{|n| n == song}
   end
 
   def add_songs(songs)
