@@ -64,7 +64,7 @@ class Song
   def artist=(artist)
     @artist = artist
     if artist != ""
-      artist.add_song(self)
+      Artist.add_song(self)
     end
   end
 
