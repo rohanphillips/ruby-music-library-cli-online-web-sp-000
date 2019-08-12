@@ -43,6 +43,9 @@ class Song
     newsong
   end
 
+  def self.create_from_filename(name)
+    Song.new_from_filename(name)
+  end
 
 
   def self.get_info(info, infotype)
