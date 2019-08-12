@@ -10,12 +10,13 @@ class Genre
   include Findable::InstanceMethods
   include Paramable::InstanceMethods
 
-  attr_accessor :genre
+  attr_accessor :name
   attr_reader :genres
 
   @@all = []
 
   def initialize(name)
+    @name = name
     self.genre=(name)
     self.class.all << self
     @genres = []
