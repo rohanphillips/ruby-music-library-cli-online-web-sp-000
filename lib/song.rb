@@ -30,10 +30,11 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    self.find_by_name(name)
-    binding.pry
-    @@all.select{|song| song.name == name}.first
-
+    newsong = self.find_by_name(name)
+    if newsong.name != name
+      newsong = Song.new(name)
+    end
+    newsong
   end
 
   def self.all
