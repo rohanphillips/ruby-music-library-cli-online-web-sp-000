@@ -40,4 +40,10 @@ class MusicLibraryController
       response = gets.strip
     end
   end
+
+  def list_songs
+    Songs.all.each_with_index{|song, index|
+      puts "#{index}. #{song.artist} - #{song.name} - #{song.genre}"
+    }
+  end
 end
