@@ -38,6 +38,7 @@ class Song
     newsong = self.create(songname)
     artistname = Song.get_info(info, "artist")
     newartist = self.find_by_name(artistname)
+    binding.pry
     if newartist == nil
       newartist = Artist.create(artistname)
     end
