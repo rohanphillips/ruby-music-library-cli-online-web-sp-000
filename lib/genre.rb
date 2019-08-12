@@ -18,6 +18,7 @@ class Genre
     @name = name
     self.class.all << self
     @genres = []
+    @songs = []
   end
 
   def self.create(genre)
