@@ -4,6 +4,9 @@ module Findable
         all.detect{|a| a.name == name}
       end
 
+      
+    end
+    module InstanceMethods
       def song_exists?(collection, song)
         collection.detect{|n| n == song}
       end
