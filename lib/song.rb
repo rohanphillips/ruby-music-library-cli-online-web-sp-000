@@ -31,6 +31,10 @@ class Song
     newsong
   end
 
+  def self.all
+    @@all
+  end
+
   def artist=(artist)
     @artist = artist
     if artist != ""
