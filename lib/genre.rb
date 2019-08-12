@@ -2,6 +2,7 @@ require 'pry'
 require_relative '../lib/concerns/memorable'
 require_relative '../lib/concerns/findable'
 require_relative '../lib/concerns/paramable'
+require_relative '../config/environment'
 
 class Genre
   extend Memorable::ClassMethods
@@ -9,6 +10,7 @@ class Genre
   extend Findable::ClassMethods
   include Findable::InstanceMethods
   include Paramable::InstanceMethods
+  extend Concerns::Findable
 
   attr_accessor :name
   attr_reader :genres
