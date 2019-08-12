@@ -31,6 +31,10 @@ class Song
     newsong
   end
 
+  def self.new_from_filename(name)
+    self.create(name)
+  end
+
   def self.all
     @@all
   end
