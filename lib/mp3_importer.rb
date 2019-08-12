@@ -38,6 +38,7 @@ class MusicLibraryController
 
     while response != "exit"
       response = gets.strip
+      binding.pry
     end
   end
 end
