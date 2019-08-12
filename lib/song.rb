@@ -14,6 +14,10 @@ class Song
 
   @@songs = []
 
+  def initialize(name)
+
+  end
+
 
   def self.all
     @@songs
