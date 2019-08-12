@@ -6,7 +6,7 @@ require_relative '../config/environment'
 class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
-  extend Concerns::Findable::ClassMethods
+  extend Concerns::Findable
   include Findable::InstanceMethods
   include Paramable::InstanceMethods
 
