@@ -10,7 +10,7 @@ class Genre
   include Findable::InstanceMethods
   include Paramable::InstanceMethods
 
-  attr_accessor :name
+  attr_accessor :genre
   attr_reader :genres
 
   @@all = []
@@ -23,7 +23,7 @@ class Genre
   end
 
   def genre=(genre)
-    @name = genre
+    @genre = genre
     # if genre != ""
     #   genre.add_song(self)
     # end
