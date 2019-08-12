@@ -39,7 +39,7 @@ class MusicLibraryController
     while response != "exit"
       response = gets.strip
     end
-    
+
   end
 
   def list_songs
