@@ -20,7 +20,7 @@ class Song
     @name = name
     @@artist = artist
     self.artist=(artist)
-    @genre = genre
+    self.genre=(genre)
   end
 
   def self.create(name)
