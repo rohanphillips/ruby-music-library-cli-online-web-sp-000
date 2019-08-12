@@ -16,3 +16,7 @@ class MusicImporter
   end
 
 end
+
+class MusicLibraryController
+
+end
