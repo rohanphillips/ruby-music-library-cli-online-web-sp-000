@@ -22,20 +22,27 @@ class Genre
     @songs = []
   end
 
+  def genre=(genre)
+    @genre = genre
+    if genre != ""
+      genre.add_song(self)
+    end
+  end
+
   def self.create(genre)
     newgenre = Genre.new(genre)
     newgenre.save
     newgenre
   end
 
-  def add_song(song)
-    if song_exists?(@songs, song) == nil
-      @songs << song
-    end
-    if song.artist == ""
-      song.artist = self
-    end
-  end
+  # def add_song(song)
+  #   if song_exists?(@songs, song) == nil
+  #     @songs << song
+  #   end
+  #   if song.artist == ""
+  #     song.artist = self
+  #   end
+  # end
 
 
   def songs
