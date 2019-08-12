@@ -23,7 +23,6 @@ class MusicLibraryController
     @path = path
     importer = MusicImporter.new(path)
     importer.import
-    list_songs
   end
 
   def call
