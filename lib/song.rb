@@ -29,11 +29,7 @@ class Song
     newsong = Song.new(name)
     newsong.save
     newsong
-  end
-
-  def self.all
-    @@all
-  end
+  end  
 
   def artist=(artist)
     @artist = artist
