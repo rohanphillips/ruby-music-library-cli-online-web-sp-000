@@ -38,6 +38,10 @@ class MusicLibraryController
     response = ""
     while response != "exit"
       response = gets.strip
+      case response
+        when "list songs""
+          return list_songs
+      end
     end
 
   end
