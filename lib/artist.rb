@@ -40,7 +40,7 @@ class Artist
   end
 
   def song_exists?(song)
-    @songs.detect{|song| song.name == song}
+    @songs.detect{|n| n == song}
   end
 
   def add_songs(songs)
