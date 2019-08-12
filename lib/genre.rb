@@ -16,17 +16,17 @@ class Genre
   @@all = []
 
   def initialize(name)
-    @name = name
+    self.genre=(name)
     self.class.all << self
     @genres = []
     @songs = []
   end
 
   def genre=(genre)
-    @genre = genre
-    if genre != ""
-      genre.add_song(self)
-    end
+    @name = genre
+    # if genre != ""
+    #   genre.add_song(self)
+    # end
   end
 
   def self.create(genre)
