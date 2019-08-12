@@ -43,6 +43,10 @@ class Genre
     end
   end
 
+  def artists 
+    @songs.collect{|song| song.artist}.uniq
+  end
+
 
   def songs
     @songs
