@@ -13,7 +13,7 @@ class Song
   attr_reader :artist
 
   @@all = []
-
+  @artist = []
   def initialize(name, artist = "")
     @name = name
     if artist != ""
