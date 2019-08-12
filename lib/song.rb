@@ -18,6 +18,11 @@ class Song
     @name = name
   end
 
+  def create(name)
+    newsong = Song.new(name)
+    newsong.save
+  end
+
 
   def self.all
     @@all
