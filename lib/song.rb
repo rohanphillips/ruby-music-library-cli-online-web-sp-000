@@ -18,9 +18,9 @@ class Song
   def initialize(name, artist = "")
     @name = name
     @artist = []
-    if artist != ""
-      self.artist=(artist)
-    end
+    # if artist != ""
+    #   self.artist=(artist)
+    # end
   end
 
   def self.create(name)
