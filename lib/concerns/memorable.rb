@@ -12,5 +12,8 @@ module Memorable
     def initialize
       self.class.all << self
     end
+
+    def save
+      self.class.all << self
   end
 end
