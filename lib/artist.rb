@@ -20,6 +20,12 @@ class Artist
     @songs = []
   end
 
+  def create(name)
+    newartist = Artist.new(name)
+    newartist.save
+    newartist
+  end
+
   def self.all
     @@all
   end
