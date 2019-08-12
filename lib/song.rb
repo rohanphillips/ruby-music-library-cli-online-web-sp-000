@@ -2,6 +2,7 @@ require 'pry'
 require_relative '../lib/concerns/memorable'
 require_relative '../lib/concerns/findable'
 require_relative '../lib/concerns/paramable'
+require_relative '../config/environment'
 
 class Song
   extend Memorable::ClassMethods
@@ -9,6 +10,7 @@ class Song
   extend Findable::ClassMethods
   include Findable::InstanceMethods
   include Paramable::InstanceMethods
+  extend Concerns::Findable
 
   attr_accessor :name
   attr_reader :artist, :genre
@@ -28,8 +30,6 @@ class Song
     newsong.save
     newsong
   end
-
-
 
   def self.all
     @@all
