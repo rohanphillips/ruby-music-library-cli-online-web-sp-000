@@ -21,7 +21,6 @@ class Song
   def self.create(name)
     newsong = Song.new(name)
     newsong.save
-    binding.pry
   end
 
 
