@@ -3,6 +3,7 @@ require_relative '../lib/concerns/memorable'
 require_relative '../lib/concerns/findable'
 require_relative '../lib/concerns/paramable'
 require_relative '../config/environment'
+
 class Artist
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
@@ -23,11 +24,11 @@ class Artist
   end
 
   def self.create(name)
-    newartist = self.find_by_name(name)
-    if newartist == nil
+    # newartist = self.find_by_name(name)
+    # if newartist == nil
       newartist = Artist.new(name)
       newartist.save
-    end
+    # end
     newartist
   end
 
