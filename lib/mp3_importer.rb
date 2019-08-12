@@ -49,8 +49,13 @@ class MusicLibraryController
 
   def list_artists
     Artist.all.sort_by{|artists| artists.name}.uniq.each_with_index{|artist, index|
-
       puts "#{index + 1}. #{artist.name}"
+    }
+  end
+
+  def list_genres
+    Genre.all.sort_by{|genres| genres.name}.uniq.each_with_index{|genre, index|
+      puts "#{index + 1}. #{genre.name}"
     }
   end
 end
