@@ -43,9 +43,7 @@ class Song
     newsong
   end
 
-  def self.create_from_filename(name)
-    self.new_from_filename(name)
-  end
+  
 
   def self.get_info(info, infotype)
     collection = info.split(" - ")
