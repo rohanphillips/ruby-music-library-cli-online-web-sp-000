@@ -32,7 +32,6 @@ class Song
   end
 
   def self.new_from_filename(name)
-
     info = name.match(/\w*.*(?=[.])/).to_s
     songname = Song.get_info(info, "songname")
     newsong = self.create(songname)
@@ -44,7 +43,7 @@ class Song
   end
 
   def self.create_from_filename(name)
-    #Song.new_from_filename(name)
+    Song.new_from_filename(name)
   end
 
 
