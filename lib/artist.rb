@@ -42,7 +42,6 @@ class Artist
 
   def song_exists?(song)
     @songs.detect{|n| n == song}
-    binding.pry
   end
 
   def add_songs(songs)
