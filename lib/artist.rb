@@ -23,8 +23,11 @@ class Artist
   end
 
   def self.create(name)
-    newartist = Artist.new(name)
-    newartist.save
+    newartist = self.find_by_name(name)
+    if newartist == nil
+      newartist = Artist.new(name)
+      newartist.save
+    end
     newartist
   end
 
