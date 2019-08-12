@@ -31,7 +31,7 @@ class Artist
   end
 
   def add_song(song)
-    if song_exists(song) == false
+    if song_exists?(song) == false
       @songs << song
     end
     if song.artist == ""
