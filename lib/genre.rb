@@ -35,14 +35,14 @@ class Genre
     newgenre
   end
 
-  # def add_song(song)
-  #   if song_exists?(@songs, song) == nil
-  #     @songs << song
-  #   end
-  #   if song.artist == ""
-  #     song.artist = self
-  #   end
-  # end
+  def add_song(song)
+    if song_exists?(@songs, song) == nil
+      @songs << song
+    end
+    if song.artist == ""
+      song.artist = self
+    end
+  end
 
 
   def songs
