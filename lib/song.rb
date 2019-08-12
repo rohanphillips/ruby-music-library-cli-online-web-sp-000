@@ -36,8 +36,8 @@ class Song
     info = name.match(/\w*.*(?=[.])/).to_s
     songname = Song.get_info(info, "songname")
     newsong = self.create(songname)
-    newsong.artist = Song.get_info(info, "artist")
-    newsong.genre = Song.get_info(info, "genre")
+    newsong.artist = Artist.create(Song.get_info(info, "artist"))
+    newsong.genre = Genre.create(Song.get_info(info, "genre"))
     newsong
   end
 
