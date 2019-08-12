@@ -32,7 +32,21 @@ class Song
   end
 
   def self.new_from_filename(name)
-    self.create(name)
+    info = filename.match(/\w*.*(?=[.])/).to_s
+    songname = Song.get_info(info, "songname")
+    self.create(songname)
+  end
+
+  def self.get_info(info, infotype)
+    collection = info.split(" - ")
+    case infotype
+      when "artist"
+        return collection[0].to_s
+      when "songname"
+        return collection[1].to_s
+      when "genre"
+        return collection[2].to_s
+    end
   end
 
   def self.all
