@@ -3,16 +3,12 @@ Bundler.require
 
 module Concerns
   module Findable
-    module ClassMethods
-      def find_by_name(name)
-        all.detect{|a| a.name == name}
-        #returns nil if not found
+    def find_or_create_by_name(name)
+      newsong = self.find_by_name(name)
+      if newsong == nil
+        newsong = Song.create(name)
       end
-    end
-    module InstanceMethods
-      def song_exists?(collection, song)
-        collection.detect{|n| n == song}
-      end
+      newsong
     end
   end
 end
