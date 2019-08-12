@@ -38,6 +38,7 @@ class Song
     newsong = self.create(songname)
     newsong.artist = Song.get_info(info, "artist")
     newsong.genre = Song.get_info(info, "genre")
+    newsong
   end
 
   def self.get_info(info, infotype)
