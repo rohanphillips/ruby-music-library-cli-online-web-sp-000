@@ -19,7 +19,7 @@ class Genre
     @name = name
     self.genre=(name)
     self.class.all << self
-    @genres = []
+    #@genres = []
     @songs = []
   end
 
