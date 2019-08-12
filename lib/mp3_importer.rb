@@ -66,6 +66,7 @@ class MusicLibraryController
     collection.sort_by{|song| song.name}.each_with_index{|song, index|
       puts "#{index + 1}. #{song.name} - #{song.genre.name}"
     }
+
   end
 
   def list_songs_by_genre
@@ -80,6 +81,6 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     song = gets.strip
-    puts "Playing #{song}"
+    puts "Playing #{list_songs[song]}"
   end
 end
