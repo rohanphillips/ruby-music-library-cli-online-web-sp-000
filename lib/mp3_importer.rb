@@ -39,8 +39,18 @@ class MusicLibraryController
     while response != "exit"
       response = gets.strip
       case response
-      when "list songs"
-        return list_songs
+        when "list songs"
+          return list_songs
+        when "list artists"
+          return list_artists
+        when "list genres"
+          return list_genres
+        when "list artist"
+          return list_songs_by_artist
+        when "list genre"
+          return list_songs_by_genre
+        when "play song"
+          play_song
       end
     end
 
