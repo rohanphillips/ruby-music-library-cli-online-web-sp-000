@@ -1,3 +1,4 @@
+module Concerns
 module Findable
   module ClassMethods
     def find_by_name(name)
@@ -10,4 +11,6 @@ module Findable
       collection.detect{|n| n == song}
     end
   end
+end
+
 end
