@@ -7,6 +7,7 @@ class Genre
   extend Memorable::ClassMethods
   include Memorable::InstanceMethods
   extend Findable::ClassMethods
+  include Findable::InstanceMethods
   include Paramable::InstanceMethods
 
   attr_accessor :name
