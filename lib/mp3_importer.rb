@@ -64,7 +64,7 @@ class MusicLibraryController
     name = gets.strip
     collection = Song.all.select{|song| song.artist.name == name}
     collection.sort_by{|song| song.name}.each_with_index{|song, index|
-      puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+      puts "#{index + 1}. #{song.name} - #{song.genre.name}"
     }
   end
 end
