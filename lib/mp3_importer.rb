@@ -84,7 +84,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song = gets.strip
     #binding.pry
-    puts song
+    puts list_songs[song.to_i].name
 
     puts "Playing #{list_songs[song.to_i]}"
   end
