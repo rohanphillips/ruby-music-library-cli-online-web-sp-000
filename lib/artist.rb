@@ -44,7 +44,7 @@ class Artist
     @songs.detect{|n| n == song}
   end
 
-  def add_songs(songs)
+  def add_song(songs)
     songs.each { |song| add_song(song) }
   end
 end
