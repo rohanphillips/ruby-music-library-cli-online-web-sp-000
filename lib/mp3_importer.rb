@@ -37,7 +37,7 @@ class MusicLibraryController
     puts "What would you like to do?"
 
     while response != "exit"
-      return response = gets.strip
+      response = gets.strip
     end
   end
 end
