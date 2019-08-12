@@ -23,6 +23,7 @@ class MusicLibraryController
     @path = path
     importer = MusicImporter.new(path)
     importer.import
+    list_songs
   end
 
   def call
@@ -41,7 +42,7 @@ class MusicLibraryController
     end
   end
 
-  def list_songs()
+  def list_songs
     collection = Song.all.sort_by{|song| song.name}.uniq
     collection.each_with_index{|song, index|
       puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
