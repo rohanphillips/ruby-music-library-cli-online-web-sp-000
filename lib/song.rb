@@ -36,7 +36,6 @@ class Song
   end
 
   def artist=(artist)
-
     @artist = artist
     if artist != ""
       artist.add_song(self)
