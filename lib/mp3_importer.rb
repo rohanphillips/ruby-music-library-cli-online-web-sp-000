@@ -10,7 +10,7 @@ class MusicImporter
   def import
     collection = @files.collect{|n| n.match(/\w*.*(?=[.])/)}
     @files.each do |i|
-      Song.new_by_filename(i)
+      Song.create_from_filename(i)
     end
 
   end
