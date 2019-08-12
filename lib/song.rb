@@ -31,6 +31,7 @@ class Song
 
   def self.find_or_create_by_name(name)
     self.find_by_name(name)
+    binding.pry
     @@all.select{|song| song.name == name}.first
 
   end
