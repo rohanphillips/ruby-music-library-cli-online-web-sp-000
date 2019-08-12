@@ -48,6 +48,9 @@ class MusicLibraryController
     }
     collection
   end
+  def list_all_songs
+    Song.all.sort_by{|song| song.name}.uniq    
+  end
 
   def list_artists
     Artist.all.sort_by{|artists| artists.name}.uniq.each_with_index{|artist, index|
@@ -83,8 +86,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     song = gets.strip
-    binding.pry
-    # puts list_songs[1]
-    # puts "Playing #{list_songs[song.to_i - 1]}"
+    
+    puts "Playing #{list_all_songs[song.to_i - 1]}"
   end
 end
