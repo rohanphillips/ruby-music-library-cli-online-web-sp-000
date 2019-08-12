@@ -17,7 +17,8 @@ class Song
 
   def initialize(name, artist = "")
     @name = name
-    @artist = artist
+    @@artist = artist
+    artist=(artist)
     # if artist != ""
     #   self.artist=(artist)
     # end
