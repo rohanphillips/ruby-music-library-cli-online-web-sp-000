@@ -20,11 +20,11 @@ class Genre
     @genres = []
   end
 
-  # def self.create(name)
-  #   newartist = Artist.new(name)
-  #   newartist.save
-  #   newartist
-  # end
+  def self.create(genre)
+    newgenre = Genre.new(genre)
+    newgenre.save
+    newgenre
+  end
 
   def self.all
     @@all
