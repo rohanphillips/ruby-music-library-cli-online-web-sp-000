@@ -43,7 +43,7 @@ class Song
     newsong
   end
 
-  
+
 
   def self.get_info(info, infotype)
     collection = info.split(" - ")
