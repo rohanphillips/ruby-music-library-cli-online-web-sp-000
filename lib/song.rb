@@ -9,7 +9,7 @@ class Song
   extend Findable::ClassMethods
   include Paramable::InstanceMethods
 
-  attr_accessor :name
+  attr_accessor :name, :genre
   attr_reader :artist
 
   @@all = []
@@ -40,9 +40,6 @@ class Song
     end
   end
 
-  def genre
-    @genre
-  end
 
 
 end
